@@ -1,5 +1,9 @@
 package skander.katas.berlinclock;
 
+import skander.katas.berlinclock.models.BerlinClock;
+
+import java.time.LocalTime;
+
 /**
  * Hello world!
  *
@@ -8,6 +12,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        LocalTime timeNow = LocalTime.now();
+        BerlinClock berlinClock = new BerlinClock(timeNow);
+        berlinClock.displayBerlinClock();
     }
 }
