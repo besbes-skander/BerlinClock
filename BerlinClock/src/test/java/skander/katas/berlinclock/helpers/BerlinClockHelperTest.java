@@ -6,7 +6,7 @@ import org.junit.Test;
 public class BerlinClockHelperTest {
 
     @Test
-    public void testgetActiveTopLampsShouldReturn2ActiveLamps() {
+    public void testGetActiveTopLampsShouldReturn2ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 13;
 
@@ -17,7 +17,7 @@ public class BerlinClockHelperTest {
 
 
     @Test
-    public void testgetActiveTopLampsShouldReturn3ActiveLamps() {
+    public void testGetActiveTopLampsShouldReturn3ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 16;
 
@@ -27,7 +27,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testgetActiveTopLampsShouldReturn0ActiveLamps() {
+    public void testGetActiveTopLampsShouldReturn0ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 4;
 
@@ -37,7 +37,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testgetActiveBottomLampsShouldReturn0ActiveLamps() {
+    public void testGetActiveBottomLampsShouldReturn0ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 15;
 
@@ -47,7 +47,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testgetActiveBottomLampsShouldReturn4ActiveLamps() {
+    public void testGetActiveBottomLampsShouldReturn4ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 14;
 
@@ -57,7 +57,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testgetActiveSecondsLampsShouldReturn0ActiveLamps() {
+    public void testGetActiveSecondsLampsShouldReturn0ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 14;
 
@@ -67,7 +67,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testgetActiveSecondsLampsShouldReturn1ActiveLamps() {
+    public void testGetActiveSecondsLampsShouldReturn1ActiveLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int unitTime = 55;
 
@@ -77,7 +77,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testconvertToLightShouldReturn1RedLamps() {
+    public void testConvertToLightShouldReturn1RedLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int activeLamps = 1;
         int numberLamps = 4;
@@ -88,7 +88,7 @@ public class BerlinClockHelperTest {
     }
 
     @Test
-    public void testconvertToLightShouldReturn10YellowLamps() {
+    public void testConvertToLightShouldReturn10YellowLamps() {
         BerlinClockHelper berlinClockHelper = new BerlinClockHelper();
         int activeLamps = 10;
         int numberLamps = 11;

@@ -3,6 +3,8 @@ package skander.katas.berlinclock.helpers;
 
 public class BerlinClockHelper {
 
+    private static final String DEFAULTCOLOR = "O";
+
     public int getActiveTopLamps(int number) {
         return (number - (number % 5)) / 5;
     }
@@ -16,16 +18,16 @@ public class BerlinClockHelper {
     }
 
     public String convertToLight(int numberOfActiveLamps, int numberOfLamps, String color) {
-        String out = "";
+        StringBuilder out = new StringBuilder();
         for (int i = 0; i < numberOfLamps; i++) {
             if(numberOfActiveLamps > 0) {
-                out += color;
+                out.append(color);
             } else {
-                out += "O";
+                out.append(DEFAULTCOLOR);
             }
             numberOfActiveLamps--;
         }
 
-        return out;
+        return out.toString();
     }
 }

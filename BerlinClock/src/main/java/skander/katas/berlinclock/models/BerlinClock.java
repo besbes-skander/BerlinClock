@@ -7,7 +7,10 @@ import java.time.format.DateTimeFormatter;
 
 public class BerlinClock {
 
-    private static final DateTimeFormatter DTF = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private static final String DATEFORMAT = "HH:mm:ss";
+    private static final String RED = "R";
+    private static final String YELLOW = "Y";
+    private static final DateTimeFormatter DTF = DateTimeFormatter.ofPattern(DATEFORMAT);
     private String seconds;
     private String topHours;
     private String bottomHours;
@@ -31,7 +34,7 @@ public class BerlinClock {
 
     public void setTopHours(String topHours) {
         int activeLamps = berlinClockHelper.getActiveTopLamps(Integer.parseInt(topHours));
-        this.topHours = berlinClockHelper.convertToLight(activeLamps, 4, "R");
+        this.topHours = berlinClockHelper.convertToLight(activeLamps, 4, RED);
     }
 
     public String getBottomHours() {
@@ -40,7 +43,7 @@ public class BerlinClock {
 
     public void setBottomHours(String bottomHours) {
         int activeLamps = berlinClockHelper.getActiveBottomLamps(Integer.parseInt(bottomHours));
-        this.bottomHours = berlinClockHelper.convertToLight(activeLamps, 4, "R");
+        this.bottomHours = berlinClockHelper.convertToLight(activeLamps, 4, RED);
     }
 
     public String getTopMinutes() {
@@ -49,7 +52,7 @@ public class BerlinClock {
 
     public void setTopMinutes(String topMinutes) {
         int activeLamps = berlinClockHelper.getActiveTopLamps(Integer.parseInt(topMinutes));
-        this.topMinutes = berlinClockHelper.convertToLight(activeLamps, 11, "Y").replaceAll("YYY", "YYR");
+        this.topMinutes = berlinClockHelper.convertToLight(activeLamps, 11, YELLOW).replaceAll("YYY", "YYR");
     }
 
     public String getBottomMinutes() {
@@ -58,7 +61,7 @@ public class BerlinClock {
 
     public void setBottomMinutes(String bottomMinutes) {
         int activeLamps = berlinClockHelper.getActiveBottomLamps(Integer.parseInt(bottomMinutes));
-        this.bottomMinutes = berlinClockHelper.convertToLight(activeLamps, 4, "R");
+        this.bottomMinutes = berlinClockHelper.convertToLight(activeLamps, 4, RED);
     }
 
     public String getSeconds() {
@@ -67,7 +70,7 @@ public class BerlinClock {
 
     public void setSeconds(String seconds) {
         int activeLamps = berlinClockHelper.getActiveSecondsLamps(Integer.parseInt(seconds));
-        this.seconds = berlinClockHelper.convertToLight(activeLamps, 1, "Y");
+        this.seconds = berlinClockHelper.convertToLight(activeLamps, 1, YELLOW);
     }
 
     public void displayBerlinClock() {

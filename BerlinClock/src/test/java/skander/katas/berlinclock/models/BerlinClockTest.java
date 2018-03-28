@@ -7,7 +7,7 @@ import java.time.LocalTime;
 
 public class BerlinClockTest {
 
-    LocalTime timeNow = LocalTime.now();
+    private LocalTime timeNow = LocalTime.now();
 
     @Test
     public void testGetTopHoursShouldReturn4characters() {
