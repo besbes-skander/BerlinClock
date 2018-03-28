@@ -3,8 +3,6 @@ package skander.katas.berlinclock.helpers;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class BerlinClockHelperTest {
 
     @Test
